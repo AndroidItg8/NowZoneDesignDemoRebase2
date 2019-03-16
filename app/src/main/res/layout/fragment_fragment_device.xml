@@ -1,0 +1,129 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itg8.com.nowzonedesigndemo.setting.fragment.FragmentDevice">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_device_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="About Device"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/lbl_breath_value"
+        app:font_value="robotoMedium" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_nowZone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_device_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="noweZone"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_hr"
+        app:font_value="robotoLight" />
+
+
+
+    <ImageView
+        android:id="@+id/img_nowzone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/lbl_nowZone"
+        app:srcCompat="@drawable/ic_bluetooth" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_nowzone"
+        android:layout_alignEnd="@+id/lbl_battery"
+        android:minWidth="120dp"
+        android:text="@string/status"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/lbl_alarm_time"
+        android:visibility="visible"
+        app:font_value="robotoMedium" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lbl_device_name"
+        android:minWidth="90dp"
+        android:text="Connected"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/txt_value_time_steps"
+        app:font_value="robotoLight" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/lbl_status"
+        android:background="@android:color/darker_gray" />
+
+
+    <itg8.com.nowzonedesigndemo.widget.BatteryView
+        android:id="@+id/img_battery"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/view" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_battery"
+        android:layout_alignEnd="@+id/lbl_battery_status"
+        android:gravity="center"
+        android:text="84% approx"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/lbl_alarm_time"
+        app:font_value="robotoMedium" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_battery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/lbl_status"
+        android:layout_below="@+id/lbl_battery"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="05dp"
+        android:gravity="center"
+        android:text="1 day 5 hrs"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/txt_value_time_steps"
+        app:font_value="robotoLight" />
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:layout_below="@+id/lbl_battery_status"
+        android:id="@+id/lbl_about_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="10"
+        android:text=" this is short description about Device this is short description about Devicethis is short description about Devicethis is short description about Devicethis is short description about Device this is short description about Device this is short description about Devicethis is short description about Devicethis is short description about Devicethis is short description about Device this is short description about Device this is short description about Devicethis is short description about Devicethis is short description about Devicethis is short description about Device"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_hr"
+        app:font_value="robotoMedium" />
+    </RelativeLayout>
+</ScrollView>

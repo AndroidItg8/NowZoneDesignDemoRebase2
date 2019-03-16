@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="itg8.com.nowzonedesigndemo.breath.BreathHistoryActivity"
+    tools:showIn="@layout/activity_breath_history">
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/recyclerview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:listitem="@layout/item_rv_breath_state" />-->
+
+
+    <!--<noman.weekcalendar.WeekCalendar-->
+    <!--android:id="@+id/weekCalendar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60dp"-->
+    <!--app:numOfPages="150"-->
+    <!--app:dayNameLength="threeLetters"-->
+    <!--app:todaysDateBgColor="#ffffff"-->
+    <!--app:daysTextSize="12sp"-->
+    <!--app:daysTextColor="@color/colorWhite"-->
+    <!--app:daysBackgroundColor="@android:color/transparent"-->
+    <!--app:weekBackgroundColor="@android:color/transparent" />-->
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/frameLayout"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_left"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_margin="20dp"-->
+    <!--app:srcCompat="@drawable/ic_left_arrow"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_right"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_margin="20dp"-->
+    <!--app:srcCompat="@drawable/ic_right_arrow"/>-->
+
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="20dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:id="@+id/lbl_date"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/lbl_alarm_time"-->
+    <!--android:textAllCaps="true"-->
+    <!--android:text="Date" />-->
+
+    <itg8.com.nowzonedesigndemo.breath.timeline.TimelineChartView xmlns:tlc="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        tlc:tlcFooterBackground="@android:color/transparent"
+        tlc:tlcGraphBackground="@color/colorOrangeCenter"
+        tlc:tlcGraphMode="tlcBarsStack"
+        tlc:tlcShowFooter="true" />
+
+
+    <com.ismaeltoe.FlowLayout xmlns:f="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_series"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graph"
+        android:visibility="visible"
+        f:horizontalPadding="8dp"
+        f:paddingEnd="08dp"
+        f:paddingStart="08dp"
+        f:verticalPadding="8dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/item_series"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone" />
+
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/lbl_calm"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Calm"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/lbl_alarm_time"-->
+    <!--app:font_value="robotoLight"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_below="@+id/view"-->
+    <!--android:layout_alignParentStart="true" />-->
+
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/txt_calm_value"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignTop="@+id/txt_focus_value"-->
+    <!--android:layout_below="@+id/lbl_calm"-->
+    <!--android:gravity="center"-->
+    <!--android:minWidth="45dp"-->
+    <!--android:text="1300"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/lbl_breath_value"-->
+    <!--android:textStyle="bold"-->
+    <!--app:font_value="juraMedium" />-->
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/lbl_calm_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:text="min"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/txt_value_time_steps"-->
+    <!--app:font_value="juraMedium"-->
+    <!--android:layout_alignBaseline="@+id/txt_calm_value"-->
+    <!--android:layout_alignBottom="@+id/txt_calm_value"-->
+    <!--android:layout_toEndOf="@+id/txt_calm_value" />-->
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/lbl_focus"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="focus"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/lbl_alarm_time"-->
+    <!--app:font_value="robotoLight"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_below="@+id/view"-->
+    <!--android:layout_alignStart="@+id/txt_focus_value" />-->
+
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/txt_focus_value"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/lbl_calm"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:gravity="center"-->
+    <!--android:minWidth="45dp"-->
+
+    <!--android:text="2000"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/lbl_breath_value"-->
+    <!--android:textStyle="bold"-->
+    <!--app:font_value="juraMedium" />-->
+
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/lbl_focus_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:text="min"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/txt_value_time_steps"-->
+    <!--app:font_value="juraMedium"-->
+
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignBaseline="@+id/txt_focus_value"-->
+    <!--android:layout_alignBottom="@+id/txt_focus_value"-->
+    <!--android:layout_toEndOf="@+id/txt_focus_value" />-->
+
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/lbl_stress"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/stress"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/lbl_alarm_time"-->
+    <!--app:font_value="robotoLight"-->
+    <!--android:gravity="center"-->
+    <!--android:minWidth="70dp"-->
+    <!--android:layout_below="@+id/view"-->
+    <!--android:layout_alignEnd="@+id/view" />-->
+
+
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/txt_stress_value"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:minWidth="45dp"-->
+    <!--android:text="150"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/lbl_breath_value"-->
+    <!--android:textStyle="bold"-->
+    <!--app:font_value="juraMedium"-->
+    <!--android:layout_below="@+id/lbl_stress"-->
+    <!--android:layout_toStartOf="@+id/lbl_stress_time" />-->
+
+    <!--<itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView-->
+    <!--android:id="@+id/lbl_stress_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:text="min"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/txt_value_time_steps"-->
+    <!--app:font_value="juraMedium"-->
+    <!--android:layout_alignBaseline="@+id/txt_stress_value"-->
+    <!--android:layout_alignBottom="@+id/txt_stress_value"-->
+    <!--android:layout_alignEnd="@+id/graph" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_calm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            cardview:cardBackgroundColor="@android:color/transparent"
+            cardview:cardPreventCornerOverlap="true"
+            cardview:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_calm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/lbl_calm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="08dp"
+                    android:gravity="center"
+                    android:text="Compose"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/lbl_alarm_time"
+                    app:font_value="robotoLight"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true" />
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/txt_calm_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minWidth="40dp"
+                    android:text="0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/lbl_breath_value"
+                    android:textStyle="bold"
+                    app:font_value="oxigenRagular"
+                    android:layout_below="@+id/lbl_calm"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="51dp" />
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/lbl_calm_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_calm_value"
+                    android:layout_below="@+id/lbl_calm"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toEndOf="@+id/txt_calm_value"
+                    android:gravity="center"
+                    android:text="min"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_value_time_steps"
+                    app:font_value="juraMedium" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_focus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            cardview:cardBackgroundColor="@android:color/transparent"
+            cardview:cardPreventCornerOverlap="true"
+            cardview:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_focus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/lbl_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:layout_marginTop="08dp"
+                    android:gravity="center_horizontal"
+
+                    android:text="Attentive"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/lbl_alarm_time"
+                    app:font_value="robotoLight"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true" />
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/txt_focus_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:minWidth="40dp"
+                    android:text="0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/lbl_breath_value"
+                    android:textStyle="bold"
+                    app:font_value="juraMedium"
+                    android:layout_below="@+id/lbl_focus"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="47dp" />
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/lbl_focus_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txt_focus_value"
+                    android:layout_below="@+id/lbl_focus"
+                    android:layout_toEndOf="@+id/txt_focus_value"
+                    android:gravity="center"
+                    android:text="min"
+                    android:layout_marginBottom="08dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_value_time_steps"
+                    app:font_value="juraMedium" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_stress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_main"
+        android:gravity="center"
+        cardview:cardBackgroundColor="@android:color/transparent"
+        cardview:cardPreventCornerOverlap="true"
+        cardview:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_stress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/lbl_stress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="08dp"
+                android:minWidth="70dp"
+                android:gravity="center_horizontal"
+                android:layout_alignEnd="@+id/lbl_stress_time"
+                android:layout_alignStart="@+id/txt_stress_value"
+                android:text="@string/stress"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/lbl_alarm_time"
+                app:font_value="robotoLight" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_stress_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_stress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="08dp"
+                android:gravity="center"
+                android:minWidth="40dp"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/lbl_breath_value"
+                android:textStyle="bold"
+                app:font_value="juraMedium" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/lbl_stress_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txt_stress_value"
+                android:layout_below="@+id/lbl_stress"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/txt_stress_value"
+                android:layout_alignBottom="@+id/txt_stress_value"
+                android:gravity="center"
+                android:text="min"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value_time_steps"
+                app:font_value="juraMedium" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

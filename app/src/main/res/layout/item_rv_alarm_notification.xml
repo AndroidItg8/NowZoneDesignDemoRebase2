@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/relative"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_app"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/txt_hours_diff"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@+id/img_app"
+        android:layout_marginStart="20dp"
+        android:id="@+id/txt_app_name"
+        android:text=""/>
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+         android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_closes" />
+
+
+    <TextView
+        android:id="@+id/txt_alarmStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/txt_hours_diff"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value"
+        android:layout_below="@+id/txt_app_name"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:id="@+id/txt_times"
+        android:text="8:00 am" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value"
+        android:layout_below="@+id/txt_app_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/img_app"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/txt_alarm_setTime"
+        android:text="Alarm  Time" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value"
+        android:layout_below="@+id/txt_alarm_setTime"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="visible"
+         android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/txt_hours"
+        android:text="11:00  08:30 am" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value"
+        android:layout_below="@+id/txt_alarm_setTime"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:visibility="visible"
+        android:layout_toEndOf="@+id/img_app"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/txt_hours_diff"
+        android:text="Hours" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/txt_hours_diff"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value"
+        android:layout_marginBottom="10dp"
+
+        android:text="Close" />
+    </RelativeLayout>
+

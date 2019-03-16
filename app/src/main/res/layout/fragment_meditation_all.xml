@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="itg8.com.nowzonedesigndemo.audio.fragment.MeditationAllFragment">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_first"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/lbl_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="8"
+                android:textColor="@android:color/white"
+                android:textSize="120sp" />
+
+            <TextView
+                android:id="@+id/lbl_meditation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_minute"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="minute meditations"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/lbl_life"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_meditation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="in your busy life..."
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="80dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/white"
+                android:layout_below="@+id/lbl_life"
+                android:layout_centerHorizontal="true"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="start"
+                android:id="@+id/btn_start"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_second"
+            android:visibility="visible"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+                <android.support.v4.view.PagerTitleStrip
+                    android:id="@+id/titlestrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                </android.support.v4.view.ViewPager>
+
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+    </RelativeLayout>
+
+

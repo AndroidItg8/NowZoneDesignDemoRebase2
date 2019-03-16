@@ -1,0 +1,167 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:williamchart="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itg8.com.nowzonedesigndemo.steps.WeekFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_step_top">
+
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="4 June - 10 June"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_lbl_dash_top"
+        android:textStyle="bold"
+        app:font_value="juraMedium" />
+
+
+    <ImageView
+        android:id="@+id/img_graph"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/txt_week"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/stacked_bar_chart"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_steps_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_week"
+        android:layout_marginBottom="05dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_steps"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Steps"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_lbl_week"
+                android:textStyle="bold"
+                app:font_value="robotoLight" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="05dp"
+                android:gravity="center"
+                android:src="@drawable/ic_steps" />
+
+        </LinearLayout>
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_steps_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="45,000"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_lbl_week_value"
+            android:textStyle="bold"
+            app:font_value="juraMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_steps_count"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <!--TODO add image-->
+        <!---->
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_cal"
+            android:drawableStart="@drawable/ic_burn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="150 Kcal"
+            android:background="@drawable/border_step_week"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_lbl_week"
+            android:textStyle="bold"
+            app:font_value="robotoMedium" />
+
+        <!--TODO add image-->
+        <!---->
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_week"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/border_step_week_main"
+            android:text="08:10 Hrs"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_lbl_week"
+            android:textStyle="bold"
+            app:font_value="robotoMedium" />
+
+    </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_chart_step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/rl_step_top">
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:clipChildren="false"
+                android:clipToPadding="false" />
+        </RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>

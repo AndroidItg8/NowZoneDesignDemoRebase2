@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="itg8.com.nowzonedesigndemo.steps.HistoryStepsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/recyclerview">
+    </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/releative_viewPager">
+
+
+            <ImageView
+                android:id="@+id/img_left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:visibility="gone"
+             android:layout_alignParentStart="true"
+                android:src="@drawable/ic_left_arrow"/>
+
+            <ImageView
+                android:id="@+id/img_right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+              android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_right_arrow"/>
+
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager">
+        </android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

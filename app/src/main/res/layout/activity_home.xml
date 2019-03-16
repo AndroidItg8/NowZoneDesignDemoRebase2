@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_back"
+    android:fitsSystemWindows="true"
+    tools:context="itg8.com.nowzonedesigndemo.home.HomeActivity">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallpaper_back"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/ToolbarColoredBackArrow"
+                app:titleTextColor="@color/colorWhite"/>
+
+
+        </android.support.design.widget.AppBarLayout>
+        <include layout="@layout/content_home" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+
+
+
+<android.support.design.widget.BottomNavigationView
+    android:id="@+id/navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:fitsSystemWindows="true"
+    android:layout_gravity="bottom"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:visibility="gone"
+    app:itemIconTint="@drawable/nav_item_color_state"
+    app:itemTextColor="@drawable/nav_item_color_state"
+    app:menu="@menu/navigation_home" />
+
+
+</RelativeLayout>
+
+
+
+<!--<android.support.design.widget.NavigationView--><!--android:id="@+id/nav_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="match_parent"--><!--android:layout_gravity="start"--><!--android:fitsSystemWindows="true"--><!--app:headerLayout="@layout/nav_header_home"--><!--app:menu="@menu/activity_home_drawer" />--><!--</android.support.design.widget.CoordinatorLayout>-->

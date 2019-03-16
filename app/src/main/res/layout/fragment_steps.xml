@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itg8.com.nowzonedesigndemo.steps.fragment.StepsFragment">
+
+
+    <include layout="@layout/layout_toolbar_home"
+        android:id="@+id/include_toolbar"/>
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_toolbar"
+        android:text="@string/hello_blank_fragment" />
+
+</RelativeLayout>

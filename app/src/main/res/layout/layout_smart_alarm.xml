@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_alarm_smart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+
+    <ImageView
+        android:id="@+id/img_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_alarm_left"
+        app:srcCompat="@drawable/ic_access_alarms_black_24dp" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_alarm_smart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_alarm_bottom"
+        android:layout_marginStart="@dimen/margin_alarm_left"
+        android:layout_marginTop="@dimen/margin_alarm_top"
+        android:layout_toEndOf="@+id/img_alarm"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/lbl_alarm_time"
+        android:textStyle="normal"
+        app:font_value="robotoMedium" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_alarm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch_time"
+        android:layout_marginBottom="@dimen/margin_alarm_bottom"
+        android:layout_marginStart="@dimen/margin_alarm_left"
+        android:layout_marginTop="@dimen/margin_alarm_top"
+        android:layout_toEndOf="@+id/img_alarm"
+        android:text="8:00 PM"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/lbl_time_front"
+        app:font_value="juraMedium" />
+
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_alarm_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/switch_time"
+        android:layout_marginBottom="@dimen/margin_alarm_bottom"
+        android:layout_marginEnd="@dimen/margin_alarm_left"
+        android:layout_marginStart="@dimen/marginAlarm"
+        android:layout_marginTop="@dimen/margin_alarm_top"
+        android:text="days"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/lbl_time_front"
+        app:font_value="robotoLight" />
+
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_time"
+        style="@style/MySwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_marginBottom="@dimen/margin_alarm_bottom"
+        android:layout_marginEnd="@dimen/margin_alarm_left"
+        android:layout_marginTop="@dimen/margin_alarm_top"
+        android:layout_alignEnd="@+id/txt_alarm_days" />
+
+</RelativeLayout>

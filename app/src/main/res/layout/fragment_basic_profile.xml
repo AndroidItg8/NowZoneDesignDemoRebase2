@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="itg8.com.nowzonedesigndemo.profile.fragment.BasicProfileFragment">
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/lbl_alarm_time"
+        app:font_value="juraMedium"
+        android:visibility="visible"
+        android:text="Select Gender"/>
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_gender"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_value_sleep"
+        android:background="@drawable/textview_ripple_effect"
+        android:clickable="true"
+        app:font_value="robotoLight"
+        android:text="FEMALE" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_female"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/textview_ripple_effect"
+        android:clickable="true"
+        android:textSize="@dimen/txt_value_sleep"
+        app:font_value="robotoLight"
+        android:text="MALE" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:layout_below="@+id/lbl_male"
+        android:textColor="@color/colorWhite"
+        android:text="OK"/>
+
+
+
+
+
+</RelativeLayout>

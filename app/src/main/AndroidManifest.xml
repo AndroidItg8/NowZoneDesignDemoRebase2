@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="itg8.com.nowzonedesigndemo">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name=".common.AppApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:allowBackup">
+        <activity
+            android:name=".home.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".steps.StepsActivity"
+            android:label="@string/title_activity_steps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".common.BaseActivity" />
+        <activity
+            android:name=".sleep.SleepActivity"
+            android:label="@string/title_activity_sleep"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".audio.AudioActivity"
+            android:label="@string/title_activity_audio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sanning.ScanDeviceActivity"
+            android:label="@string/title_activity_scan"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".connection.BleService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".breath.BreathHistoryActivity"
+            android:label="@string/title_activity_breath_history"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".alarm.AlarmActivity"
+            android:label="@string/title_activity_alarm"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".setting.AlarmSettingActivity"
+            android:label="@string/title_activity_alarm_setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- android:name=".setting.SettingActivity" -->
+        <!-- android:label="@string/title_activity_setting" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+        <activity
+            android:name=".steps.StepGoalActivity"
+            android:label="@string/title_activity_step_goal"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".notification.NotificationBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ACTION_NZ_DATA_AVAIL" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".connection.BluetoothBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".setting.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ACTION_ALARM_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".setting.notification.AlarmNotification"
+            android:label="@string/title_activity_alarm_notification"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".home.StepMovingActivity"
+            android:label="@string/title_activity_step_moving"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".breath.BreathHistoryListActivity"
+            android:label="@string/title_activity_breath_history_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WakeupAlarmActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_wakeup_alarm"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".setting.SettingMainActivity"
+            android:label="@string/setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".connection.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".connection.DateChangeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

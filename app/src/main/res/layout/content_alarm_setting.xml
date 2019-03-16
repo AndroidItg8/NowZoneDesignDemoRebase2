@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/margin_alarm_Right"
+    android:layout_marginStart="@dimen/margin_alarm_left"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="itg8.com.nowzonedesigndemo.setting.AlarmSettingActivity"
+    tools:showIn="@layout/activity_alarm_setting">
+
+    <RelativeLayout
+        android:id="@+id/releative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/lbl_awakeAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Wakeup Time"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value"
+            app:font_value="robotoLight" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txtAmPm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_alarm_time"
+        android:layout_below="@+id/lbl_awakeAlarm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/txt_alarm_time"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_sleep_normal"
+        app:font_value="robotoLight" />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_alarm_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl_awakeAlarm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/margin_alarm_left"
+            android:layout_marginTop="15dp"
+            android:text="8:00"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/lbl_alarm_setting_time"
+            app:font_value="oxigenRagular" />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_alarm_time"
+            android:layout_below="@+id/lbl_awakeAlarm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/txt_alarm_time"
+            android:text=" "
+            android:id="@+id/txt_am"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_sleep_normal"
+            app:font_value="robotoLight" />
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/releative"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:progressDrawable="@drawable/custom_progressbar"
+        android:visibility="visible" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_alarm_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        android:text="alarm yet not start...!!"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value" />
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_alarm_status"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btn_alarmSetting"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/btn_alarm"
+            android:text="Start alarm"
+            android:visibility="visible"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_home" />
+        <Button
+            android:id="@+id/btn_alarmCalibarating"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/alarm_calibarating"
+            android:text="Calibrating"
+            android:visibility="gone"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_home" />
+
+        <Button
+            android:id="@+id/btn_alarmStarted"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/alarm_started"
+            android:text="Alarm Started"
+            android:visibility="gone"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/txt_home" />
+
+        <Button
+            android:id="@+id/btn_alarmFinished"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/alarm_finished"
+            android:text="Alarm Started"
+            android:visibility="gone"
+            android:textColor="@color/color_red"
+            android:textSize="@dimen/txt_home"/>
+    </FrameLayout>
+
+</RelativeLayout>

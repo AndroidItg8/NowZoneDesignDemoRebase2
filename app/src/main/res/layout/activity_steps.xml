@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/bg_1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activities.MainActivity">
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/navigation"
+    android:fitsSystemWindows="true"
+    tools:context="itg8.com.nowzonedesigndemo.steps.StepsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@android:color/transparent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <RadioGroup
+                    android:id="@+id/rbg_main_steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="80dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rgb_steps_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rbtn_selector_steps_left"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
+                        android:text="Today "
+                        android:textColor="@drawable/rbtn_text_color_steps" />
+
+                    <RadioButton
+                        android:id="@+id/rgb_step_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rbtn_selector_steps"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="15dp"
+                        android:text="History"
+                        android:textColor="@drawable/rbtn_text_color_steps" />
+                </RadioGroup>
+
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <!--</RelativeLayout>-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_toolbar"
+                android:layout_marginTop="?attr/actionBarSize"
+                app:layout_collapseMode="parallax">
+
+                <itg8.com.nowzonedesigndemo.steps.widget.ColorArcProgressBar
+                    android:id="@+id/progressSteps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    app:back_color="@android:color/darker_gray"
+                    app:back_width="2dp"
+                    app:front_color1="#69cbd2"
+                    app:front_color2="#7eb6e2"
+                    app:front_color3="#989df7"
+                    app:front_width="10dp"
+                    app:is_need_content="true"
+                    app:is_need_title="true"
+                    app:is_need_unit="true"
+                    app:max_value="100"
+                    app:string_title="Steps to go"
+                    app:string_unit="%"
+                    app:total_engle="270" />
+
+
+                <ImageView
+                    android:id="@+id/img_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/stacked_bar_chart"
+                    android:visibility="gone" />
+
+
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--app:layout_behavior="itg8.com.nowzonedesigndemo.steps.widget.QuickReturnFloaterBehavior"-->
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <include
+        android:id="@+id/layout_include"
+        layout="@layout/content_steps" />
+
+</android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_marginTop="10dp"
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:menu="@menu/navigation" />
+</RelativeLayout>

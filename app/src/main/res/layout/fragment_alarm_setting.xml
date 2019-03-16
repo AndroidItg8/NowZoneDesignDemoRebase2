@@ -1,0 +1,279 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="itg8.com.nowzonedesigndemo.setting.fragment.AlarmSettingFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_alarm_Right"
+        android:layout_marginStart="@dimen/margin_alarm_left">
+
+        <RelativeLayout
+            android:id="@+id/releative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp">
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/lbl_awakeAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Wakeup Time"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value"
+                app:font_value="robotoLight" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txtAmPm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txt_alarm_time"
+                android:layout_below="@+id/lbl_awakeAlarm"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/txt_alarm_time"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_sleep_normal"
+                android:visibility="gone"
+                app:font_value="robotoLight" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_alarm_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_awakeAlarm"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_alarm_left"
+                android:layout_marginTop="15dp"
+                android:text="8:00"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/lbl_alarm_setting_time"
+                app:font_value="juraMedium" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txt_alarm_time"
+                android:layout_below="@+id/lbl_awakeAlarm"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/txt_alarm_time"
+                android:text=" "
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_sleep_normal"
+                app:font_value="robotoLight" />
+
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/releative"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:progressDrawable="@drawable/custom_progressbar"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/lbl_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="4"
+                android:text="this is short description of alarm setting"
+                android:textColor="@color/colorWhite"
+                android:visibility="visible"
+                app:font_value="robotoLight" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rl_time_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                        android:id="@+id/lbl_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="05dp"
+                        android:layout_marginTop="05dp"
+                        android:text="Alarm Start Time"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_value"
+                        android:textStyle="bold"
+                        app:font_value="robotoMedium" />
+
+                    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                        android:id="@+id/txt_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="05dp"
+                        android:layout_marginTop="05dp"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/lbl_alarm_time"
+                        android:textStyle="bold"
+                        app:font_value="juraMedium" />
+
+                    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                        android:id="@+id/lbl_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lbl_start_time"
+                        android:layout_marginBottom="05dp"
+                        android:layout_marginTop="05dp"
+                        android:text="Alarm Complete Time"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_value"
+                        android:textStyle="bold"
+                        app:font_value="robotoMedium" />
+
+                    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                        android:id="@+id/txt_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/lbl_start_time"
+                        android:layout_marginBottom="05dp"
+                        android:layout_marginTop="05dp"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/lbl_alarm_time"
+                        android:textStyle="bold"
+
+
+                        app:font_value="juraMedium" />
+
+                    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                        android:id="@+id/lbl_remain_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_end_time"
+                        android:layout_marginBottom="05dp"
+                        android:layout_marginTop="05dp"
+                        android:text="Alarm Remaining Time"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_value"
+                        android:textStyle="bold"
+                        app:font_value="robotoMedium" />
+
+                    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                        android:id="@+id/txt_remain_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/txt_end_time"
+                        android:layout_marginBottom="05dp"
+                        android:layout_marginTop="05dp"
+                        android:text=""
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/lbl_alarm_time"
+                        android:textStyle="bold"
+                        app:font_value="juraMedium" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_alarm_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/frameLayout_setting"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="alarm yet not start...!!"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value"
+            android:visibility="visible" />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btn_alarmSetting"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/btn_alarm"
+                android:text="Start alarm"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_home"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_alarmCalibarating"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/alarm_calibarating"
+                android:text="Calibrating"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_home"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_alarmStarted"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/alarm_started"
+                android:text="Alarm Started"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/txt_home"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_alarmFinished"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/alarm_finished"
+                android:text="Alarm Stop"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/txt_home"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</ScrollView>

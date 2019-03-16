@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itg8.com.nowzonedesigndemo.setting.fragment.MeditationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Meditation Course : 0.5 Hr"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:font_value="robotoMedium" />
+
+
+    </RelativeLayout>
+
+    <itg8.com.nowzonedesigndemo.widget.SnippingRecyclerview
+        android:id="@+id/rv_audio_stages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="16dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_breath"
+        android:enabled="true"
+        android:icon="@drawable/ic_breaths"
+        android:title="Breath" />
+    <item
+        android:id="@+id/nav_step"
+        android:enabled="true"
+        android:icon="@drawable/ic_steps"
+        android:title="Step" />
+
+    <item
+        android:id="@+id/nav_sleep"
+        android:enabled="true"
+        android:icon="@drawable/ic_sleeping"
+        android:title="Sleep" />
+
+</menu>

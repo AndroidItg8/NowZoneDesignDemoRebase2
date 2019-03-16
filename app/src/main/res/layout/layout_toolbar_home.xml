@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_radio"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@android:color/transparent"
+    android:fitsSystemWindows="true"
+    android:minHeight="?attr/actionBarSize"
+    app:theme="@style/ToolbarColoredBackArrow"
+    app:titleTextColor="@color/colorWhite">
+
+
+
+
+
+
+            <RadioGroup
+                android:id="@+id/rbg_main_steps"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingEnd="80dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="visible"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rgb_steps_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rbtn_selector_steps_left"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="Today "
+                    android:textColor="@drawable/rbtn_text_color_steps" />
+
+                <RadioButton
+                    android:id="@+id/rgb_step_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rbtn_selector_steps"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="15dp"
+                    android:text="History"
+                    android:textColor="@drawable/rbtn_text_color_steps" />
+            </RadioGroup>
+
+
+        </android.support.v7.widget.Toolbar>
+
+

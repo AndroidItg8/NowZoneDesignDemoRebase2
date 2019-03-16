@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itg8.com.nowzonedesigndemo.audio.fragment.MeditationSingleFragment">
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_meditation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="Meditation"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_breath_value"
+        app:font_value="robotoLight" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_meditation_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_meditation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="3 of 10 "
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_sleep_value"
+        android:visibility="visible"
+        app:font_value="juraMedium" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp">
+
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:src="@drawable/play_meditation"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/img_pause"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:src="@drawable/circle_normal"
+                android:visibility="visible" />
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_stage_count"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:text="2"
+                android:textColor="@color/colorWhite"
+                android:textSize="48sp"
+                />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/img_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/complete_meditation"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="8:00"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_sleep_value"
+        app:font_value="juraMedium" />
+
+    <ImageView
+        android:id="@+id/img_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/txt_time"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_av_timer_black_24dp" />
+
+    <ImageView
+        android:id="@+id/img_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/txt_time"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_time_check" />
+
+    <ImageView
+        android:id="@+id/img_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/selector_reply" />
+
+    <ImageView
+        android:id="@+id/img_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/selector_like"
+        android:visibility="gone" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="you play this session 2 times"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value" />
+
+
+</RelativeLayout>

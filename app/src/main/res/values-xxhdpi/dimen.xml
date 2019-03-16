@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!--For Home Page -->
+    <dimen name="homeText">14dp</dimen>
+    <dimen name="marginBottomHomeImage">30dp</dimen>
+    <dimen name="marginRightHomeImage">10dp</dimen>
+    <dimen name="txt_breath_value">40sp</dimen>
+    <dimen name="txt_sleep_value">19sp</dimen>
+    <dimen name="text_sleep_normal">17sp</dimen>
+    <dimen name="lbl_breath_value">20sp</dimen>
+
+
+
+    <dimen name="txt_value">14sp</dimen>
+    <dimen name="txt_lbl_dash_top">18sp</dimen>
+    <dimen name="txt_value_sleep">16sp</dimen>
+    <dimen name="txt_home">12sp</dimen>
+    <dimen name="txt_lbl_dash_bottom">12sp</dimen>
+    <dimen name="fabSize">56dp</dimen>
+
+
+
+
+    <dimen name="txt_value_time">13sp</dimen>
+    <dimen name="txt_value_time_steps">12sp</dimen>
+    <dimen name="txt_hr">15sp</dimen>
+
+    <!---  Form Alarm Setting Page
+  -->
+    <dimen name="marginAlarm">5sp</dimen>
+    <dimen name="paddingAlarm">5sp</dimen>
+    <dimen name="lbl_alarm_time">19sp</dimen>
+    <dimen name="margin_alarm_left">15sp</dimen>
+    <dimen name="margin_alarm_Right">15sp</dimen>
+    <dimen name="margin_alarm_top">10sp</dimen>
+    <dimen name="lbl_time_front">19sp</dimen>
+    <dimen name="lbl_alarm_setting_time">48sp</dimen>
+
+
+    <dimen name="margin_alarm_bottom">10sp</dimen>
+    <dimen name="txt_edit_text_size">14sp</dimen>
+    <dimen name="txt_step_goal">18sp</dimen>
+
+
+
+
+</resources>

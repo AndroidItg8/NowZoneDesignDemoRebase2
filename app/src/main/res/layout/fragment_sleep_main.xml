@@ -1,0 +1,119 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context="itg8.com.nowzonedesigndemo.sleep.fragment.SleepMainFragment">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/txt_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="Yesterday"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value" />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_right_arrow" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/barchart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/txt_day"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/stacked_bar_chart" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/barchart"
+            android:visibility="gone"
+            android:id="@+id/rl_time">
+
+            <TextView
+                android:id="@+id/txt_sleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="5dp"
+                android:text="11:30"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_hr" />
+
+            <TextView
+                android:id="@+id/txt_sleepValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/txt_sleepTime"
+                android:text="PM"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_hr" />
+
+            <TextView
+                android:id="@+id/txt_sleepEndValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="05dp"
+                android:text="AM"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_hr" />
+
+            <TextView
+                android:id="@+id/txt_sleepEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="03dp"
+                android:layout_marginTop="05dp"
+                android:layout_toStartOf="@+id/txt_sleepEndValue"
+                android:text="8:30"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_hr" />
+
+        </RelativeLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_time">
+
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+    </ScrollView>

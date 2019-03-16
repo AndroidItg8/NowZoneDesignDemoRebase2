@@ -1,0 +1,60 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="itg8.com.nowzonedesigndemo.home.HomeActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_alarm"
+        android:orderInCategory="100"
+        android:title="@string/action_alarm"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="100"
+        android:title="@string/action_profile"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_device"
+        android:orderInCategory="100"
+        android:title="@string/action_device"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_alram"
+        android:orderInCategory="100"
+        android:title="@string/action_alarm"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_step_goal"
+        android:orderInCategory="100"
+        android:title="@string/action_step_goal"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_meditation"
+        android:orderInCategory="100"
+        android:title="@string/action_meditation"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_device_history"
+        android:orderInCategory="100"
+        android:title="@string/action_device_history"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="@string/action_about"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_contact_us"
+        android:orderInCategory="100"
+        android:title="@string/action_contact"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="@string/action_logout"
+        app:showAsAction="never" />
+
+</menu>

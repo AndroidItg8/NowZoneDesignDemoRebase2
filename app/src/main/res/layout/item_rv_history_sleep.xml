@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:layout_marginBottom="05dp"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/ll_miles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="05dp"
+            android:layout_marginBottom="05dp"
+            android:layout_weight="1">
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_miles_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="50"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value_time_steps"
+                app:font_value="juraMedium" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_miles_value"
+                android:layout_centerHorizontal="true"
+                android:text="Steps"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value_time"
+                app:font_value="robotoLight" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="05dp"
+            android:layout_marginBottom="05dp"
+            android:layout_weight="1">
+
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_golas_value"
+                android:layout_centerHorizontal="true"
+                android:text="Goals"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value_time"
+                app:font_value="robotoLight" />
+
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_golas_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="100"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value_time_steps"
+                app:font_value="juraMedium" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="05dp"
+            android:layout_marginBottom="05dp"
+            android:layout_weight="1">
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_avg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_avg_value"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Avg"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value_time"
+                app:font_value="robotoLight" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/txt_avg_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="50"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value_time_steps"
+                app:font_value="juraMedium" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

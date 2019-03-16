@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#90CAF9</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <!--<color name="color_endColor">#2C1951</color>-->
+    <!--<color name="color_startColor">#2B164E</color>-->
+
+    <!--<color name="color_startColorblock2">#361f66</color>-->
+    <!--<color name="color_endColorblock2">#341c60</color> -->
+
+    <!--for th Step Activity-->
+
+    <color name="blue_transparent">#3b2196f3</color>
+    <color name="blue_half_transparent">#872196f3</color>
+    <color name="accent">#455A64</color>
+    <color name="colorGreen">#43A047</color>
+    <color name="colorOrange">#ed7a56</color>
+    <color name="colorOrangeStart">#65f57e58</color>
+    <color name="colorOrangeEnd">#65f28360</color>
+    <color name="colorOrangeCenter">#53f78b69</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_color">#ffffff</color>
+    <color name="btn_selected">#bc0a263d</color>
+    <color name="btn_normal">#bc2196f3</color>
+
+
+    <color name="color_wave">#efc22c18</color>
+    <color name="color_endColor">#10133c</color>
+    <!--<color name="color_startColor">#2C1951</color>-->
+    <!--<color name="color_startColor">#361f66</color>-->
+    <color name="color_startColor">#1f2066</color>
+
+    <color name="color_startColorblock2">#361f66</color>
+    <color name="color_endColorblock2">#341c60</color>
+    <color name="color_green">#00CBAC</color>
+    <color name="color_green_dark">#81c784</color>
+    <color name="color_sky">#00B0EC</color>
+    <!--<color name="color_sky">#f342c8f5</color>-->
+    <color name="color_skin">#D4A280</color>
+    <color name="default_header_color">#445566</color>
+    <color name="text_color">#000000</color>
+    <color name="btn_stroke_red">#F5A671</color>
+    <color name="color_red">#500702</color>
+
+    <color name="pressed_color">#4d90fe</color>
+    <color name="default_color">#ffffff</color>
+    <color name="color_wave_normal">#24005fb7</color>
+    <color name="color_wave_normal_bg">#2786fb</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="firstColor">#8b00bcd4</color>
+    <color name="secondColor">#8ae91e63</color>
+    <color name="thirdColor">#8af5be7a</color>
+
+
+</resources>

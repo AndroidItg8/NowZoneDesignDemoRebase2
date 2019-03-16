@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_alignParentBottom="true"
+    android:gravity="bottom"
+    app:cardBackgroundColor="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:alpha="0.8"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@android:color/transparent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/gradient_block"
+                android:gravity="center_horizontal"
+                android:id="@+id/ll_breath_avg"
+
+                android:paddingBottom="@dimen/marginBottomHomeImage">
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/txt_breath"
+                    style="@style/home_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="05dp"
+                    android:layout_marginRight="05dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_breaths"
+                    android:gravity="center_vertical"
+                    android:text="@string/breath"
+                    app:font_value="robotoLight" />
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/txt_breathCount"
+                    style="@style/home_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_AvgBreathValue"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/breath_value"
+                    android:textSize="@dimen/txt_lbl_dash_bottom"
+                    app:font_value="robotoLight" />
+
+                <TextView
+                    android:id="@+id/txt_AvgBreathValue"
+                    style="@style/home_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:layout_marginTop="20dp"
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/transparent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/ll_sleep_main"
+                android:background="@drawable/gradientblocktwo"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/marginBottomHomeImage">
+
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/txt_forth"
+                    style="@style/home_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="05dp"
+                    android:layout_marginRight="05dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_sleeping"
+                    android:gravity="center_vertical"
+                    android:text="@string/sleep"
+                    app:font_value="robotoLight" />
+
+
+                <TextView
+                    android:id="@+id/txt_hour"
+                    style="@style/home_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_hourValue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="05dp"
+                    android:gravity="center"
+                    android:text="@string/sleep_value"
+                    android:textSize="@dimen/txt_lbl_dash_bottom" />
+
+                <TextView
+                    android:id="@+id/txt_hourValue"
+                    style="@style/home_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="7:30"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/transparent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rlSteps"
+                android:background="@drawable/gradient_block"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/marginBottomHomeImage">
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/txt_step"
+                    style="@style/home_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="05dp"
+                    android:layout_marginRight="05dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_steps"
+                    android:gravity="center_vertical"
+                    android:text="@string/step"
+                    app:font_value="robotoLight" />
+
+
+                <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                    android:id="@+id/txt_stepCount"
+                    style="@style/home_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_stepCountValue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/step_value"
+                    android:textSize="@dimen/txt_lbl_dash_bottom" />
+
+                <TextView
+                    android:id="@+id/txt_stepCountValue"
+                    style="@style/home_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+
+
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="itg8.com.nowzonedesigndemo.steps.StepGoalActivity"
+    tools:showIn="@layout/activity_step_goal">
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/goal" />
+
+
+    <Button
+        android:id="@+id/btn_remove"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/flag"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/btn_minus"
+        app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/btn_add"
+        android:layout_below="@+id/flag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/btn_remove"
+        android:layout_toStartOf="@+id/btn_add"
+        android:background="@drawable/boder_step_goal"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="0"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_sleep_value"
+        app:font_value="robotoLight" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/flag"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/btn_plus"
+        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_background"
+        android:text="save"
+        android:textColor="@color/colorWhite" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn_save"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line_3"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Notify when achieved"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_step_goal"
+        android:visibility="visible"
+        app:font_value="robotoLight" />
+
+    <ToggleButton
+        android:id="@+id/switch_notify"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:textOn=""
+        android:textOff=""
+        android:checked="false"
+        android:background="@drawable/selector_track"
+
+        android:visibility="visible"
+        android:layout_above="@+id/line_3"
+        android:layout_alignEnd="@+id/lbl_maximumGoal" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_minimumGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_minimumGoalValue"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Minimum Goal"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_step_goal"
+        app:font_value="robotoLight" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_minimumGoalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="1000"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_sleep_value"
+        app:font_value="robotoLight" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_maximumGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lbl_maximumGoalValue"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Maximum  Goal"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_step_goal"
+        app:font_value="robotoLight" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_maximumGoalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/line_1"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="10000"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_sleep_value"
+        app:font_value="robotoLight" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/lbl_notify"
+        android:background="@color/colorWhite" />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:visibility="invisible"
+        android:background="@color/colorWhite" />
+
+</RelativeLayout>

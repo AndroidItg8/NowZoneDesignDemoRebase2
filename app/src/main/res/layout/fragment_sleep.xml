@@ -1,0 +1,283 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_durations"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="DURATIONS"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value"
+            app:layout_widthPercent="60%" />
+
+        <LinearLayout
+            android:id="@+id/ll_percent_durations"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ll_goals"
+            android:layout_below="@+id/txt_durations"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_widthPercent="60%">
+
+
+            <LinearLayout
+                android:id="@+id/ll_percent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txt_sleepValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="11:30"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_sleep_value" />
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="In Bed"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_sleep_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/txt_wakeupValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="8:30"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_sleep_value" />
+
+
+                <TextView
+                    android:id="@+id/txt_wakeup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Sleep"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_sleep_normal" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_goals"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            app:layout_widthPercent="40%">
+
+            <TextView
+                android:id="@+id/txt_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="GOAL"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value" />
+
+            <itg8.com.nowzonedesigndemo.sleep.widget_custom_progressbar.DonutProgress
+                android:id="@+id/circularProgressGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                custom:donut_progress="30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_hour"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="8 HOUR"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_sleep_normal"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_overView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center">
+
+        <itg8.com.nowzonedesigndemo.custom_widget.AutoSizeTextView
+            android:id="@+id/txt_break"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="BreakDown of Sleep"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value" />
+
+
+
+        <itg8.com.nowzonedesigndemo.sleep.widget_custom_progressbar.CustomProgressBar
+            android:id="@+id/custom_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/txt_break"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@android:color/transparent" />
+
+
+        <TextView
+            android:id="@+id/txt_awake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/custom_progressbar"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginBottom="03dp"
+            android:layout_marginStart="30dp"
+
+            android:textColor="@color/colorWhite"
+            android:drawableLeft="@drawable/sleep_awake"
+            android:drawablePadding="05dp"
+            android:text="AWAKE"
+            android:textAllCaps="true"
+            android:textSize="@dimen/txt_value_sleep" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_awake"
+           android:gravity="center"
+            android:text=" 1:40 MIN"
+            android:paddingRight="03dp"
+            android:paddingLeft="03dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value_time"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_deep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/custom_progressbar"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="03dp"
+            android:layout_marginEnd="30dp"
+            android:drawableLeft="@drawable/sleep_deep"
+            android:drawablePadding="05dp"
+            android:text="DEEP"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value_sleep" />
+
+
+        <TextView
+            android:id="@+id/txt_deep_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txt_deep"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text=" 02:00 HR"
+            android:paddingRight="03dp"
+            android:paddingLeft="03dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value_time"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/custom_progressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/sleep_light"
+            android:drawablePadding="05dp"
+            android:gravity="center"
+            android:text="Light"
+            android:textColor="@color/colorWhite"
+
+            android:textAllCaps="true"
+            android:textSize="@dimen/txt_value_sleep" />
+
+        <TextView
+            android:id="@+id/txt_light_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_light"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="06:00 HR"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value_time"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

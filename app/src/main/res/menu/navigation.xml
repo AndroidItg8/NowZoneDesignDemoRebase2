@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:enabled="true"
+        android:id="@+id/nav_day"
+        android:icon="@drawable/ic_week"
+        android:title="Day" />
+
+    <item
+        android:enabled="true"
+        android:id="@+id/nav_week"
+        android:icon="@drawable/ic_month"
+        android:title="Week" />
+
+    <item
+        android:enabled="true"
+        android:id="@+id/nav_month"
+        android:icon="@drawable/ic_year"
+        android:title="Month" />
+
+</menu>

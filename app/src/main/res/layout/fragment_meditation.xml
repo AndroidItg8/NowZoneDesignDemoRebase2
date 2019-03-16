@@ -1,0 +1,148 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itg8.com.nowzonedesigndemo.audio.fragment.MeditationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/lbl_meditation_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Sleepy Meditation"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_step_goal" />
+
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/lbl_meditation_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl_meditation_name"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:lines="5"
+            android:maxLines="5"
+            android:text="this is short description of Sleepy Meditation this is short description of Sleepy Meditation this is short description of Sleepy Meditation this is short description of Sleepy Meditation."
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/lbl_alarm_time" />
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl_meditation_description"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:src="@drawable/play_meditation"
+            android:visibility="visible" />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_play"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="10"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_step_goal" />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/lbl_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_time"
+            android:layout_below="@+id/img_play"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="04dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/txt_time"
+            android:text="minute"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_home" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="2dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/lbl_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/white" />
+
+
+        <ImageView
+            android:id="@+id/img_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/img_play"
+            android:layout_alignTop="@+id/view"
+            app:srcCompat="@drawable/ic_session" />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/view"
+            android:layout_alignStart="@+id/img_session"
+            android:text="10"
+            android:textColor="#F05228"
+            android:textSize="@dimen/txt_home" />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_session"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/view"
+            android:text="Total Session"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value_sleep" />
+
+        <ImageView
+            android:id="@+id/img_meditation_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/view"
+            android:layout_toEndOf="@+id/img_play"
+            app:srcCompat="@drawable/ic_time_meditation" />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/view"
+            android:layout_alignStart="@+id/img_meditation_time"
+            android:text="1 h  40 min"
+            android:textColor="#F05228"
+            android:textSize="@dimen/txt_hr" />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_total_time"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/view"
+            android:text="Total Meditation Time"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value_sleep" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

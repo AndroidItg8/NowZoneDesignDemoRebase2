@@ -1,0 +1,325 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="itg8.com.nowzonedesigndemo.steps.TodayStepsFragment">
+    <!--xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"-->
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:id="@+id/rl_releative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                android:id="@+id/txt_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="600 Calories burned today"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value"
+                custom:font_value="robotoMedium" />
+
+            <ProgressBar
+                android:id="@+id/customProgressRectangle"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/txt_calories"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_step_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_releative">
+
+            <LinearLayout
+                android:id="@+id/ll_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/ll_burn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_avg_calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:contentPadding="10dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                                android:id="@+id/customFontTextView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Daily Avg "
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt_value"
+                                app:font_value="robotoMedium" />
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:id="@+id/txt_daliy_avg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_caloriesText"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textColor="@color/colorOrange"
+                                android:textSize="@dimen/txt_breath_value"
+                                app:font_value="juraMedium" />
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="03dp"
+                                android:gravity="center"
+                                android:text="Steps"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt_value"
+                                android:textStyle="bold"
+                                app:font_value="robotoLight" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_calories"
+                        android:layout_width="match_parent"
+                        app:contentPadding="10dp"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_calories"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:id="@+id/txt_caloriesText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Goals"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt_value"
+                                app:cardBackgroundColor="@android:color/transparent"
+                                app:font_value="robotoMedium" />
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:id="@+id/txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_caloriesText"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textColor="@color/colorOrange"
+                                android:textSize="@dimen/txt_breath_value"
+                                custom:font_value="oxigenRagular" />
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="03dp"
+                                android:gravity="center"
+                                android:text="Steps"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt_value"
+                                android:textStyle="bold"
+                                custom:font_value="robotoLight" />
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_main"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:background="@android:color/transparent">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_miles"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:contentPadding="10dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                                android:id="@+id/customFontTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Complete "
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt_value"
+                                app:font_value="robotoMedium" />
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:id="@+id/txtStepComplete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_caloriesText"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="50"
+                                android:textColor="@color/colorOrange"
+                                android:textSize="@dimen/txt_breath_value"
+                                custom:font_value="oxigenRagular" />
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="03dp"
+                                android:gravity="center"
+                                android:text="Steps"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt_value"
+                                android:textStyle="bold"
+                                custom:font_value="robotoLight" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_total_calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:contentPadding="10dp"
+
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=" Week Total"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt_value"
+                                custom:font_value="robotoMedium" />
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:id="@+id/txtWeekTotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_caloriesText"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textColor="@color/colorOrange"
+                                android:textSize="@dimen/txt_breath_value"
+                                custom:font_value="oxigenRagular" />
+
+                            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView xmlns:custom="http://schemas.android.com/apk/res/itg8.com.nowzonedesigndemo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="03dp"
+                                android:gravity="center"
+                                android:text="Steps"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/txt_value"
+                                android:textStyle="bold"
+                                custom:font_value="robotoLight" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+</RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

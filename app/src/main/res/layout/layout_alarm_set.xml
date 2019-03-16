@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        card:cardBackgroundColor="@android:color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/rl_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginAlarm"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <GridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:horizontalSpacing="5sp"
+                    android:numColumns="7"
+                    android:verticalSpacing="5dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_vibrations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_days"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/margin_alarm_bottom"
+                android:layout_marginStart="@dimen/margin_alarm_left"
+                android:layout_marginTop="@dimen/margin_alarm_top"
+                app:srcCompat="@drawable/ic_vibration_black_24dp" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_vibration"
+                style="@style/MySwitchStyleForBottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_days"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/margin_alarm_bottom"
+                android:layout_marginStart="@dimen/marginAlarm"
+                android:layout_marginTop="@dimen/margin_alarm_top"
+                android:layout_toEndOf="@+id/img_vibrations"
+                android:checked="true" />
+
+
+            <ImageView
+                android:id="@+id/img_speaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_days"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/margin_alarm_bottom"
+                android:layout_marginStart="@dimen/margin_alarm_left"
+                android:layout_marginTop="@dimen/margin_alarm_top"
+                android:layout_toEndOf="@+id/switch_vibration"
+                app:srcCompat="@drawable/ic_speakers" />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_days"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/margin_alarm_bottom"
+                android:layout_marginEnd="@dimen/margin_alarm_left"
+                android:layout_marginStart="@dimen/marginAlarm"
+                android:layout_marginTop="@dimen/margin_alarm_top"
+                android:layout_toEndOf="@+id/img_speaker"
+                android:progressBackgroundTint="#393838"
+                android:max="100"
+                android:progress="50" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/lbl_alarmTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/lbl_alarmType"
+                android:layout_below="@+id/seekbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_alarm_bottom"
+                android:layout_marginTop="@dimen/margin_alarm_top"
+                android:text="8:00 AM"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/lbl_alarm_time"
+                android:visibility="visible"
+                app:font_value="juraMedium" />
+
+            <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                android:id="@+id/lbl_alarmType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switch_vibration"
+                android:layout_marginBottom="@dimen/margin_alarm_bottom"
+                android:layout_marginStart="@dimen/margin_alarm_left"
+                android:layout_marginTop="@dimen/margin_alarm_top"
+                android:gravity="center"
+                android:padding="@dimen/paddingAlarm"
+                android:text="Alarm type"
+                android:textColor="@color/colorBlack"
+                app:font_value="juraMedium" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

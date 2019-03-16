@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:fabSize="mini"
+
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_eight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:fabSize="mini"
+
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_nine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:elevation="08dp"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/fab_margin"
+        app:borderWidth="0dp"
+        app:elevation="5dp"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</LinearLayout>

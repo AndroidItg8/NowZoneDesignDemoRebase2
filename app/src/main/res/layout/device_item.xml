@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_selected_device_item"
+    android:layout_margin="10dp">
+    <itg8.com.nowzonedesigndemo.widget.SignalMeter
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/SignalMeter"
+        app:maxBars="10"
+        app:barType="1"
+        app:bgColor="@color/colorAccent"
+        app:bgColor1="@color/colorAccent"
+        app:prColor="@color/colorPrimary"
+        app:prColor1="@color/colorPrimary"
+        app:barSpacing="1dp"
+        app:progressValue="1"
+        app:rotation="0"
+        android:padding="2dp"
+        android:layout_margin="03dp"
+        android:layout_centerVertical="true"
+        android:alpha="1"
+        android:visibility="visible"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deviceName"
+        android:textStyle="bold"
+        app:font_value="robotoMedium"
+        android:layout_centerInParent="true"
+        android:text="@string/app_name"
+        android:layout_margin="03dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deviceAddress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        app:font_value="juraMedium"
+        android:text="12:12:12:12"
+        android:layout_below="@+id/deviceName"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Connect"
+        android:layout_margin="08dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:background="@drawable/btn_background"/>
+
+
+
+</RelativeLayout>

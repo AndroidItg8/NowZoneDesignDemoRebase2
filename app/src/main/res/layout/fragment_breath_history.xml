@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context="itg8.com.nowzonedesigndemo.breath.BreathHistoryFragment">
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_calm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Calm"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/lbl_alarm_time"
+        app:font_value="robotoLight" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_focus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="focus"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/lbl_alarm_time"
+        app:font_value="robotoLight" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_stress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/stress"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/lbl_alarm_time"
+        app:font_value="robotoLight" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_calm_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_calm"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="10 "
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/lbl_breath_value"
+        app:font_value="juraMedium" />
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_calm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_calm_value"
+        android:layout_toEndOf="@+id/txt_calm_value"
+        android:layout_below="@+id/lbl_calm"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="min "
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_value_time_steps"
+        app:font_value="juraMedium" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_focus_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_focus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="10 "
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_sleep_value"
+        app:font_value="juraMedium" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_focus_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_focus_value"
+        android:layout_below="@+id/lbl_focus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/txt_focus_value"
+        android:gravity="center"
+        android:text="min "
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_value_time_steps"
+        app:font_value="juraMedium" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/txt_stress_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_stress"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/lbl_stress"
+        android:gravity="center"
+        android:text="10 "
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_sleep_value"
+        app:font_value="juraMedium" />
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:id="@+id/lbl_stress_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_stress_value"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lbl_stress"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="min "
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txt_value_time_steps"
+        app:font_value="juraMedium" />
+
+
+
+
+
+
+</RelativeLayout>

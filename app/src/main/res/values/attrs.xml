@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="WaveLoadingView">
+        <attr name="wlv_borderWidth" format="dimension" />
+        <attr name="wlv_borderColor" format="color" />
+        <attr name="wlv_progressValue" format="integer" />
+        <attr name="wlv_shapeType" format="enum">
+            <enum name="triangle" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="square" value="2" />
+            <enum name="rectangle" value="3" />
+        </attr>
+        <attr name="wlv_triangle_direction" format="enum">
+            <enum name="north" value="0" />
+            <enum name="south" value="1" />
+            <enum name="east" value="2" />
+            <enum name="west" value="3" />
+        </attr>
+        <attr name="wlv_round_rectangle" format="boolean" />
+        <attr name="wlv_round_rectangle_x_and_y" format="integer" />
+        <attr name="wlv_waveColor" format="color" />
+        <attr name="wlv_wave_background_Color" format="color" />
+        <attr name="wlv_waveAmplitude" format="float" />
+        <attr name="wlv_titleTop" format="string" />
+        <attr name="wlv_titleCenter" format="string" />
+        <attr name="wlv_titleBottom" format="string" />
+        <attr name="wlv_titleTopSize" format="dimension" />
+        <attr name="wlv_titleCenterSize" format="dimension" />
+        <attr name="wlv_titleBottomSize" format="dimension" />
+        <attr name="wlv_titleTopColor" format="color" />
+        <attr name="wlv_titleCenterColor" format="color" />
+        <attr name="wlv_titleBottomColor" format="color" />
+        <attr name="wlv_titleTopStrokeColor" format="color" />
+        <attr name="wlv_titleTopStrokeWidth" format="dimension" />
+        <attr name="wlv_titleBottomStrokeColor" format="color" />
+        <attr name="wlv_titleBottomStrokeWidth" format="dimension" />
+        <attr name="wlv_titleCenterStrokeColor" format="color" />
+        <attr name="wlv_titleCenterStrokeWidth" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="SignalMeter">
+        <attr name="maxBars" format="integer" />
+        <attr name="bgColor" format="color" />
+        <attr name="bgColor1" format="color" />
+        <attr name="prColor" format="color" />
+        <attr name="prColor1" format="color" />
+        <attr name="barSpacing" format="dimension" />
+        <attr name="progressValue" format="integer" />
+        <attr name="barType" format="integer" />
+        <attr name="rotation" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressView">
+
+        !-- Text-->
+        <attr name="cpv_text" format="string" />
+        <attr name="cpv_text_steps" format="string" />
+        <attr name="cpv_unit" format="string" />
+        <attr name="cpv_textColor" format="color" />
+        <attr name="cpv_unitColor" format="color" />
+        <attr name="cpv_showUnit" format="boolean" />
+        <attr name="cpv_autoTextColor" format="boolean" />
+        <attr name="cpv_textTypeface" format="string" />
+        <attr name="cpv_unitTypeface" format="string" />
+        <attr name="cpv_decimalFormat" format="string" />
+
+        <!-- Text sizes-->
+        <attr name="cpv_textSize" format="dimension" />
+        <attr name="cpv_unitSize" format="dimension" />
+        <attr name="cpv_textScale" format="float" />
+        <attr name="cpv_unitScale" format="float" />
+        <attr name="cpv_unitToTextScale" format="float" />
+        <attr name="cpv_autoTextSize" format="boolean" />
+
+        <!-- Progress Bar -->
+        <attr name="cpv_direction" format="enum">
+            <enum name="CW" value="0" />
+            <enum name="CCW" value="1" />
+        </attr>
+        <attr name="cpv_value" format="float" />
+        <attr name="cpv_maxValue" format="float" />
+        <attr name="cpv_minValueAllowed" format="float" />
+        <attr name="cpv_maxValueAllowed" format="float" />
+        <attr name="cpv_barWidth" format="dimension" />
+        <attr name="cpv_barColor" format="color" />
+        <attr name="cpv_barColor1" format="color" />
+        <attr name="cpv_barColor2" format="color" />
+        <attr name="cpv_barColor3" format="color" />
+        <attr name="cpv_startAngle" format="integer" />
+        <attr name="cpv_barStrokeCap" format="enum">
+            <enum name="Butt" value="0" />
+            <enum name="Round" value="1" />
+            <enum name="Square" value="2" />
+        </attr>
+        <attr name="cpv_barStartEndLineWidth" format="dimension" />
+        <attr name="cpv_barStartEndLineSweep" format="float" />
+        <attr name="cpv_barStartEndLineColor" format="color" />
+        <attr name="cpv_barStartEndLine" format="enum">
+            <enum name="None" value="0" />
+            <enum name="Start" value="1" />
+            <enum name="End" value="2" />
+            <enum name="Both" value="3" />
+        </attr>
+
+        <!-- Spinner-->
+        <attr name="cpv_spin" format="boolean" />
+        <attr name="cpv_spinColor" format="color" />
+        <attr name="cpv_spinSpeed" format="float" />
+        <attr name="cpv_spinBarLength" format="float" />
+        <attr name="cpv_showTextInSpinningMode" format="boolean" />
+
+        <!-- Rim-->
+        <attr name="cpv_rimColor" format="color" />
+        <attr name="cpv_rimWidth" format="dimension" />
+
+        <!-- Outer Contour-->
+        <attr name="cpv_outerContourColor" format="color" />
+        <attr name="cpv_outerContourSize" format="dimension" />
+
+        <!-- Inner Contour-->
+        <attr name="cpv_innerContourColor" format="color" />
+        <attr name="cpv_innerContourSize" format="dimension" />
+
+        <!-- Background color-->
+        <attr name="cpv_fillColor" format="color" />
+
+        <!-- Seek mode-->
+        <attr name="cpv_seekMode" format="boolean" />
+
+        <!-- Block -->
+        <attr name="cpv_roundToBlock" format="boolean" />
+        <attr name="cpv_roundToWholeNumber" format="boolean" />
+        <attr name="cpv_blockScale" format="float" />
+        <attr name="cpv_blockCount" format="integer" />
+
+        <attr name="cpv_textMode" format="enum">
+            <enum name="Text" value="0" />
+            <enum name="Percent" value="1" />
+            <enum name="Value" value="2" />
+            <enum name="Text_Steps" value="3" />
+        </attr>
+
+        <attr name="cpv_unitPosition" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="left_top" value="2" />
+            <enum name="right_top" value="3" />
+            <enum name="left_bottom" value="4" />
+            <enum name="right_bottom" value="5" />
+        </attr>
+
+    </declare-styleable>
+
+    <!--this style for the Custom autoTextView used in Sleep Fragment-->
+
+
+    <declare-styleable name="AutoSizeTextView">
+        <attr name="minTxtSize" format="dimension" />
+    </declare-styleable>
+
+    <!--this for sleep page for show th e oover all  sleep goals-->
+
+    <declare-styleable name="DonutProgress">
+        <attr name="donut_progress" format="float" />
+        <attr name="donut_max" format="integer" />
+
+        <attr name="donut_unfinished_color" format="color" />
+        <attr name="donut_finished_color" format="color" />
+
+        <attr name="donut_finished_stroke_width" format="dimension" />
+        <attr name="donut_unfinished_stroke_width" format="dimension" />
+
+        <attr name="donut_text_size" format="dimension" />
+        <attr name="donut_text_color" format="color" />
+
+        <attr name="donut_prefix_text" format="string" />
+        <attr name="donut_suffix_text" format="string" />
+        <attr name="donut_text" format="string" />
+
+        <attr name="donut_background_color" format="color" />
+
+        <attr name="donut_inner_bottom_text" format="string" />
+        <attr name="donut_inner_bottom_text_size" format="dimension" />
+        <attr name="donut_inner_bottom_text_color" format="color" />
+
+        <attr name="donut_circle_starting_degree" format="integer" />
+        <attr name="donut_show_text" format="boolean" />
+        <attr name="donut_inner_drawable" format="reference" />
+    </declare-styleable>
+
+
+    <!--    for steps screen to show steps in arc progressbar -->
+
+    <declare-styleable name="ColorArcProgressBar">
+        <attr name="back_color" format="color" />
+        <attr name="front_color1" format="color" />
+        <attr name="front_color2" format="color" />
+        <attr name="front_color3" format="color" />
+        <attr name="back_width" format="dimension" />
+        <attr name="front_width" format="dimension" />
+        <attr name="is_need_title" format="boolean" />
+        <attr name="is_need_content" format="boolean" />
+        <attr name="is_need_unit" format="boolean" />
+        <attr name="is_need_dial" format="boolean" />
+        <attr name="string_title" format="string" />
+        <attr name="string_unit" format="string" />
+        <attr name="total_engle" format="integer" />
+        <attr name="current_value" format="float" />
+        <attr name="max_value" format="float" />
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomFontTextView">
+        <attr name="font_value" format="integer" >
+            <enum name="robotoLight" value="0" />
+            <enum name="juraMedium" value="1" />
+            <enum name="oxigenRagular" value="2" />
+            <enum name="robotoMedium" value="3" />
+            </attr>
+    </declare-styleable>
+    <!--    for steps screen to show steps in arc Double Bounds -->
+    <attr name="SpinKitViewStyle" format="reference" />
+
+    <declare-styleable name="SpinKitView">
+        <attr name="SpinKit_Style">
+            <enum name="RotatingPlane" value="0" />
+            <enum name="DoubleBounce" value="1" />
+            <enum name="Wave" value="2" />
+            <enum name="WanderingCubes" value="3" />
+            <enum name="Pulse" value="4" />
+            <enum name="ChasingDots" value="5" />
+            <enum name="ThreeBounce" value="6" />
+            <enum name="Circle" value="7" />
+            <enum name="CubeGrid" value="8" />
+            <enum name="FadingCircle" value="9" />
+            <enum name="FoldingCube" value="10" />
+            <enum name="RotatingCircle" value="11" />
+            <enum name="MultiplePulse" value="12" />
+            <enum name="PulseRing" value="13" />
+            <enum name="MultiplePulseRing" value="14" />
+        </attr>
+        <attr name="SpinKit_Color" format="color" />
+    </declare-styleable>
+
+
+    <!---for the Breath History Page  Timeline-->
+
+    <declare-styleable name="tlcTimelineChartView">
+        <!-- Background of the graph area -->
+        <attr name="tlcGraphBackground" format="color" />
+
+        <!-- Background of the footer area -->
+        <attr name="tlcFooterBackground" format="color" />
+
+        <!-- Whether display the footer -->
+        <attr name="tlcShowFooter" format="boolean" />
+
+        <!-- Footer bar height -->
+        <attr name="tlcFooterBarHeight" format="dimension" />
+
+        <!-- Bar item width -->
+        <attr name="tlcBarItemWidth" format="dimension" />
+
+        <!-- Space between bar items -->
+        <attr name="tlcBarItemSpace" format="dimension" />
+
+        <!-- Graph draw mode -->
+        <attr name="tlcGraphMode" format="enum">
+            <enum name="tlcBars" value="0" />
+            <enum name="tlcBarsStack" value="1" />
+            <enum name="tlcBarsSideBySide" value="2" />
+        </attr>
+
+        <!-- Whether play a sound effect when an item was selected -->
+        <attr name="tlcPlaySelectionSoundEffect" format="boolean" />
+
+        <!-- The sound effect to play when tlcPlaySelectionSoundEffect is true. Set to
+            value 0 to use system default click effect -->
+        <attr name="tlcSelectionSoundEffectSource" format="reference" />
+
+        <!-- Whether animate cursor transition -->
+        <attr name="tlcAnimateCursorTransition" format="boolean" />
+
+        <!-- Whether follow real time cursor updates (live update). Only if
+             scroll is in the last item -->
+        <attr name="tlcFollowCursorPosition" format="boolean" />
+
+        <!-- Whether move current view to the nearest selection if, after a user
+             scroll/fling operation, the view is not centered in an item. If true move
+             view to the nearest item and selected it -->
+        <attr name="tlcAlwaysEnsureSelection" format="boolean" />
+    </declare-styleable>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+
+    <!--- For Custom battery-->
+
+    <declare-styleable name="BatteryView">
+        <attr name="charging" format="boolean" />
+        <attr name="showValue" format="boolean" />
+        <attr name="levelColors" format="boolean" />
+        <attr name="warningLevel" format="integer" />
+        <attr name="level" format="integer" />
+    </declare-styleable>
+
+    <!-- for BottomNavigation View In Home Page-->
+    <declare-styleable name="BottomNavigationView">
+            <!-- If text will be enabled for the tabs, defaulted to true -->
+            <attr name="bnv_with_text" format="boolean" />
+            <!-- If there will be a shadow on the view, default is true -->
+            <attr name="bnv_shadow" format="boolean" />
+            <!-- If the view should be set up for a tablet, default is false -->
+            <attr name="bnv_tablet" format="boolean" />
+            <!-- Disable or enable the background color, default is true -->
+            <attr name="bnv_colored_background" format="boolean" />
+            <!-- If a supplied ViewPager will have a slide animation, default is true -->
+            <attr name="bnv_viewpager_slide" format="boolean" />
+            <!-- Text size for the active tab, default size is 14sp -->
+            <attr name="bnv_active_text_size" format="dimension" />
+            <!-- Text size for an inactive tab, default size is 12sp -->
+            <attr name="bnv_inactive_text_size" format="dimension" />
+            <!-- The color of an activated tab. Will only be considered if bnv_colored_background is false, no default is set -->
+            <attr name="bnv_active_color" format="color" />
+        </declare-styleable>
+
+
+</resources>

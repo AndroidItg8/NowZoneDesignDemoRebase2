@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/imgview"
+        app:layout_widthPercent="20%"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@+id/imgview"
+        android:layout_height="wrap_content"
+        >
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font_value="juraMedium"
+            android:textSize="13sp"
+            android:textColor="@color/divider"
+            android:text="Thus Nov 4"
+            android:id="@+id/lbl_date"
+            />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font_value="juraMedium"
+            android:textColor="@color/colorWhite"
+            android:text="2000 Steps"
+            android:paddingTop="4dp"
+            android:id="@+id/lbl_step"
+            android:textSize="14sp"
+            android:layout_below="@+id/lbl_date"
+            />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font_value="juraMedium"
+            android:layout_centerInParent="true"
+            android:paddingTop="4dp"
+            android:textColor="@color/colorWhite"
+            android:text="120 Kcal"
+            android:textSize="13sp"
+            android:id="@+id/lbl_kal"
+            android:layout_below="@+id/lbl_date"
+            />
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:font_value="juraMedium"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="4dp"
+            android:textSize="13sp"
+            android:textColor="@color/colorWhite"
+            android:text="92%"
+            android:id="@+id/lbl_percent"
+            android:layout_below="@+id/lbl_date"
+            />
+
+
+
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

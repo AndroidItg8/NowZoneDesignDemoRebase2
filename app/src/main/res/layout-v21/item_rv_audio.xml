@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/med_one"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_bg_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#d84315"
+                android:scaleType="fitXY"
+                android:src="@drawable/circle_normal"
+                android:elevation="16dp"
+                />
+
+            <TextView
+                android:id="@+id/txtStageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:text="12"
+                android:textColor="@color/colorWhite"
+                android:transitionName="@string/textLogoTransitionName"
+                android:textSize="48sp" />
+
+        </FrameLayout>
+
+        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+            android:id="@+id/txt_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/btn_profile_selected"
+            android:layout_gravity="center"
+            app:font_value="juraMedium"
+            android:padding="10dp"
+            android:text="10:08 Min"
+            />
+
+        <TextView
+            android:id="@+id/txt_stage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="name stage"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

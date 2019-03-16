@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/marginLeftProfile"
+    android:layout_marginStart="@dimen/marginRightProfile"
+    android:layout_marginTop="@dimen/margin_alarm_top"
+    android:gravity="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="itg8.com.nowzonedesigndemo.profile.ProfileActivity"
+    tools:showIn="@layout/activity_profile">
+
+
+
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:text="Your Basic details"
+        android:textSize="16sp"
+        android:id="@+id/basic_detail"
+        android:textStyle="bold"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_name"
+        android:layout_below="@+id/basic_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="text"
+            android:textColorHint="@color/colorWhite"
+            android:lines="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_value_sleep" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_name"
+        android:id="@+id/frame_height">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorWhite"
+            android:textColor="@color/colorWhite"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/edt_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Height"
+                android:clickable="true"
+                android:focusable="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_value_sleep"
+                android:inputType="number"
+                android:lines="1" />
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/ll_height_feet">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_height_feet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite">
+
+                <EditText
+                    android:id="@+id/edt_height_feet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="height feet"
+                    android:inputType="number"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:visibility="gone"
+
+                    android:textColor="@color/colorWhite"
+                    android:lines="1"
+                    android:textSize="@dimen/txt_value_sleep"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_height_inch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite">
+
+                <EditText
+                    android:id="@+id/edt_height_inch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="height inch"
+                    android:inputType="number"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:textColor="@color/colorWhite"
+                    android:lines="1"
+                    android:textSize="@dimen/txt_value_sleep"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/frame_height"
+        android:id="@+id/input_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/colorWhite">
+
+        <EditText
+            android:id="@+id/edt_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/rbg_main_weight"
+            android:hint="Weight"
+            android:clickable="true"
+            android:inputType="number"
+            android:focusable="false"
+            android:textColor="@color/colorWhite"
+            android:lines="1"
+            android:textSize="@dimen/txt_value_sleep"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:layout_below="@+id/input_weight">
+
+        <EditText
+            android:id="@+id/edt_gender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Gender"
+            android:inputType="text"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColor="@color/colorWhite"
+            android:lines="1"
+            android:textSize="@dimen/txt_value_sleep"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_gender"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_value"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:id="@+id/lbl_birth"
+        android:text="Select your date of birth"/>
+
+<LinearLayout
+    android:layout_below="@+id/lbl_birth"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/ll_age"
+    android:layout_marginTop="20dp"
+    android:weightSum="3">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/colorWhite"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/edt_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/rbg_main_weight"
+            android:hint="Day "
+            android:gravity="center"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="@dimen/txt_value_sleep"
+            android:textColor="@color/colorWhite"
+            android:lines="1"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/colorWhite"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/edt_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/rbg_main_weight"
+            android:hint="Month "
+            android:gravity="center"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="@dimen/txt_value_sleep"
+            android:textColor="@color/colorWhite"
+            android:lines="1"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/colorWhite"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/edt_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/rbg_main_weight"
+            android:gravity="center"
+            android:hint="Year"
+            android:textSize="@dimen/txt_value_sleep"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/colorWhite" />
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Save"
+        android:textColor="@color/colorWhite" />
+
+
+
+
+</RelativeLayout>

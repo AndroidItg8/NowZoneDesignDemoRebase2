@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:alpha="0.8"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/ll_breath_avg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_block"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true">
+
+                        <ImageView
+                            android:id="@+id/img_breath"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            app:srcCompat="@drawable/ic_breaths" />
+
+                        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                            android:id="@+id/txt_breath"
+                            style="@style/home_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/img_breath"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            app:font_value="robotoLight"
+                            android:layout_toRightOf="@+id/img_breath"
+                            android:text="@string/breath" />
+                    </RelativeLayout>
+
+                    <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                        app:font_value="robotoLight"
+                        android:id="@+id/txt_breathCount"
+                        style="@style/home_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_AvgBreathValue"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/breath_value"
+                        android:textSize="@dimen/txt_lbl_dash_bottom" />
+
+                    <TextView
+                        android:id="@+id/txt_AvgBreathValue"
+                        style="@style/home_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="20dp"
+                        android:text=""
+                        android:visibility="invisible"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_sleep_main"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/gradientblocktwo"
+                android:orientation="vertical">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/marginBottomHomeImage">
+
+
+                        <ImageView
+                            android:id="@+id/img_sleep"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            app:srcCompat="@drawable/ic_sleeping" />
+
+                        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                            app:font_value="robotoLight"
+                            android:id="@+id/txt_forth"
+                            style="@style/home_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/img_sleep"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignTop="@+id/img_sleep"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:layout_toRightOf="@+id/img_sleep"
+                            android:text="@string/sleep" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txt_hour"
+                        style="@style/home_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_hourValue"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/sleep_value"
+                        android:textSize="@dimen/txt_lbl_dash_bottom" />
+
+                    <TextView
+                        android:id="@+id/txt_hourValue"
+                        style="@style/home_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="20dp"
+                        android:text="7:30"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rlSteps"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_block"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/marginBottomHomeImage">
+
+                        <ImageView
+                            android:id="@+id/img_step"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/ic_steps" />
+
+                        <itg8.com.nowzonedesigndemo.steps.widget.CustomFontTextView
+                            app:font_value="robotoLight"
+                            android:id="@+id/txt_step"
+                            style="@style/home_textView"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginRight="05dp"
+                            android:layout_width="wrap_content"
+                            android:layout_alignTop="@+id/img_step"
+                            android:gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/img_step"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@+id/img_step"
+                            android:text="@string/step" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/txt_stepCount"
+                        style="@style/home_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_stepCountValue"
+                        android:layout_marginTop="5dp"
+
+                        android:text="@string/step_value"
+                        android:textSize="@dimen/txt_lbl_dash_bottom" />
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/txt_stepCountValue"
+                        style="@style/home_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:text="0"
+                        android:textSize="20sp" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

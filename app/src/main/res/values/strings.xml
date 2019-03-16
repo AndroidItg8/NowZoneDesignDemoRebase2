@@ -1,0 +1,186 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
+    <string name="app_name">Nowzone </string>
+    <string name="action_alarm">Alarm</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_device">Device</string>
+    <string name="action_contact">Contact Us</string>
+    <string name="action_step_goal">Step Goal</string>
+    <string name="action_meditation">Meditation</string>
+    <string name="action_device_history">Device History</string>
+    <string name="action_smart">Smart</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_about">About Us</string>
+
+
+    <!-- For Home Page Strings Values -->
+    <string name="sleep">Sleep</string>
+    <string name="step">Step</string>
+    <string name="breath">Breath</string>
+    <string name="breath_rate">Breath Rate</string>
+    <string name="status"> Device Name</string>
+    <string name="sleep_value">HRS</string>
+    <string name="calm">Compose</string>
+    <string name="focus">Attentive</string>
+    <string name="stress">Stress</string>
+    <string name="step_value">Steps</string>
+    <string name="breath_value">Average</string>
+    <string name="minute">Per Minute</string>
+    <string name="title_activity_steps"></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_sleep">Sleep</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <item name="fab_translationY_from_AppBarBoundFabBehavior" type="id" />
+    <string name="action_device_disconnect">ACTION_NW_DEVICE_DISCONNECT</string>
+    <string name="action_data_avail">ACTION_NZ_DATA_AVAIL</string>
+    <string name="logoTransitionName">TRANSITION_LOGO_VIEW</string>
+    <string name="textLogoTransitionName">TRANSITION_TEXT_LOGO_VIEW</string>
+
+    <string-array name="month">
+
+
+        <item>JAN</item>
+        <item> FEB</item>
+        <item>MARCH</item>
+        <item>APRI</item>
+        <item>MAY</item>
+        <item>JUNE</item>
+        <item>JULY</item>
+
+    </string-array>
+    <string name="title_activity_audio">Meditation</string>
+    <string name="title_activity_scan">Scan device</string>
+    <string name="dialog_disconnected_device">It seems like you are not connected to Nowzone device. Please make sure device is having enough chanrging. Make it running and search.</string>
+    <string name="selected_device">Please select device from list</string>
+    <string name="not_have_bluetooth">Sorry, you dont have Bluetooth LE supported device. You cannot use this app on non BLE devices</string>
+    <string name="rationale_location">To better scan result we need permission for location. Dont worry we are not sharing your location with anybody.</string>
+    <string name="rationale_storage">Please grant storage permission. We need this for storing details offline</string>
+    <string name="title_activity_breath_history">Breath History</string>
+    <string name="title_activity_alarm">Alarm</string>
+    <string name="title_activity_profile">Profile</string>
+
+    <string name="title_activity_alarm_setting">Alarm </string>
+
+    <string name="title_activity_step_goal">Step Goal</string>
+    <string name="title_activity_alarm_notification">AlarmNotification</string>
+    <string name="title_activity_step_moving">Step Moving</string>
+    <string name="item_timestamp">Timestamp:&#160;&#160;</string>
+    <string name="item_name"><xliff:g id="name">%1$s</xliff:g>:&#160;&#160;</string>
+    <!--<string name="item_name"><xliff:g id="name">%1$s</xliff:g>:&#200;&#200;</string>-->
+    <string name="title_activity_breath_history_list">BreathHistoryList</string>
+    <string name="action_device_sleep_start">ACTION_NW_DEVICE_SLEEP_STARTED</string>
+    <string name="action_device_sleep_end">ACTION_NW_DEVICE_SLEEP_ENDED</string>
+    <string name="title_activity_device_history">Device</string>
+    <string name="title_activity_setting_main">Setting</string>
+
+    <string name="title_activity_wakeup_alarm">Wakeup</string>
+    <string name="setting">Setting</string>
+    <string name="stop_button">STOP ALARM</string>
+    <string name="wakeup_alarm_content">WAKE UP..\nWAKE UP… \nWAKE UP....</string>
+    <string name="msg_device_disconnect">Please connect device manually...</string>
+    <string name="url_breathing">/api/CustomerAPI/UserBreathing</string>
+    <string name="url_steps">/api/CustomerAPI/UserSteps</string>
+    <string name="title_activity_login">Nowzone</string>
+    <string name="login_info">Please enter credentials provided by your company. If you don\'t have yet, ask your respected department</string>
+    <string name="empty">Field is empty</string>
+    <string name="invalid_email">Invalid Email Address</string>
+    <string name="invalid_pass">Password must be minimum 6 character</string>
+    <string name="url_login">/Token</string>
+    <string name="title_activity_audio_player">AudioPlayerActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+
+
+</resources>
